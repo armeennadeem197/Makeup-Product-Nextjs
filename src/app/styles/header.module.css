@@ -1,0 +1,82 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color:rgb(223, 136, 150);
+  padding: 10px 20px;
+  color: rgb(253, 248, 248);
+}
+
+/* Logo/Brand Name */
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+/* Hamburger menu icon */
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none; /* Hidden by default, shown in mobile view */
+}
+
+/* Side menu styles */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Hide off-screen by default */
+  width: 250px;
+  height: 100%;
+  background-color: #f8f0f0;
+  transition: right 0.3s ease; /* Smooth transition */
+  z-index: 1000;
+  padding: 20px;
+}
+
+.sideMenu.active {
+  right: 0; /* Slide in when active */
+}
+
+.cut {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Navigation links */
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navigation li {
+  margin: 0 15px;
+}
+
+.navigation a {
+  color: rgb(241, 236, 236);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block; /* Show hamburger icon in mobile view */
+  }
+
+  .navigation {
+      display: none; /* Hide navigation links in mobile view */
+  }
+}
